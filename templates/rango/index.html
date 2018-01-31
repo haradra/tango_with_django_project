@@ -10,7 +10,11 @@
 
 		<h2>Rango says...</h2>
 		<div>
+		{% if user.is_authenticated %}
+			howdy {{ user.username }}!
+		{% else %}
 			hey there partner!
+		{% endif %}
 		</div>
 		
 		<h3>Most Liked Categories</h3>	
